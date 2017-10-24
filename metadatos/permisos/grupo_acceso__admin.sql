@@ -35,6 +35,48 @@ INSERT INTO apex_usuario_grupo_acc_item (proyecto, usuario_grupo_acc, item_id, i
 	'opertur', --proyecto
 	'admin', --usuario_grupo_acc
 	NULL, --item_id
-	'4000017'  --item
+	'4000018'  --item
+);
+INSERT INTO apex_usuario_grupo_acc_item (proyecto, usuario_grupo_acc, item_id, item) VALUES (
+	'opertur', --proyecto
+	'admin', --usuario_grupo_acc
+	NULL, --item_id
+	'4000019'  --item
+);
+INSERT INTO apex_usuario_grupo_acc_item (proyecto, usuario_grupo_acc, item_id, item) VALUES (
+	'opertur', --proyecto
+	'admin', --usuario_grupo_acc
+	NULL, --item_id
+	'4000020'  --item
+);
+INSERT INTO apex_usuario_grupo_acc_item (proyecto, usuario_grupo_acc, item_id, item) VALUES (
+	'opertur', --proyecto
+	'admin', --usuario_grupo_acc
+	NULL, --item_id
+	'4000021'  --item
+);
+INSERT INTO apex_usuario_grupo_acc_item (proyecto, usuario_grupo_acc, item_id, item) VALUES (
+	'opertur', --proyecto
+	'admin', --usuario_grupo_acc
+	NULL, --item_id
+	'4000022'  --item
+);
+INSERT INTO apex_usuario_grupo_acc_item (proyecto, usuario_grupo_acc, item_id, item) VALUES (
+	'opertur', --proyecto
+	'admin', --usuario_grupo_acc
+	NULL, --item_id
+	'4000023'  --item
+);
+INSERT INTO apex_usuario_grupo_acc_item (proyecto, usuario_grupo_acc, item_id, item) VALUES (
+	'opertur', --proyecto
+	'admin', --usuario_grupo_acc
+	NULL, --item_id
+	'4000025'  --item
+);
+INSERT INTO apex_usuario_grupo_acc_item (proyecto, usuario_grupo_acc, item_id, item) VALUES (
+	'opertur', --proyecto
+	'admin', --usuario_grupo_acc
+	NULL, --item_id
+	'4000026'  --item
 );
 --- FIN Grupo de desarrollo 4
