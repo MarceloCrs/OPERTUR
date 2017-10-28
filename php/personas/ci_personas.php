@@ -17,6 +17,12 @@ class ci_personas extends opertur_ci
 	//-----------------------------------------------------------------------------------
 	//---- Eventos -------------------------------------------------------------------
 	//-----------------------------------------------------------------------------------
+function evt__eliminar()
+{
+	$this->cn()->eliminar();
+	$this->cn()->resetear();
+	$this->set_pantalla('pant_inicial');
+}
 	function evt__agregar()
 	{
 		$this->cn()->resetear();

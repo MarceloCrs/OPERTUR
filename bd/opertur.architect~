@@ -25,7 +25,7 @@
     <column id="COL5" populated="true" UUID="b9898295-b513-42d0-9d41-6e344257e67e" autoIncrement="false" autoIncrementSequenceName="personas_dni_seq" defaultValue="" name="dni" nullable="0" physicalName="dni" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL6" populated="true" UUID="edd6756b-3c75-421f-b517-d4911a02c5a3" autoIncrement="false" autoIncrementSequenceName="personas_cuit_cuil_seq" defaultValue="" name="cuit_cuil" nullable="1" physicalName="cuit_cuil" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL6" populated="true" UUID="edd6756b-3c75-421f-b517-d4911a02c5a3" autoIncrement="false" autoIncrementSequenceName="personas_cuit_cuil_seq" defaultValue="" name="cuit_cuil" nullable="0" physicalName="cuit_cuil" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>cuil o cuit</remarks>
     </column>
     <column id="COL7" populated="true" UUID="f11f8d8e-4aed-4e46-aa66-07bf46111e22" autoIncrement="false" autoIncrementSequenceName="personas_razon_social_seq" defaultValue="" name="razon_social" nullable="0" physicalName="razon_social" precision="45" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -441,10 +441,10 @@
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="0.8408964152537143" viewportX="0" viewportY="132" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="0.8408964152537143" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="409" y="191" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB14" x="909" y="177" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB20" x="882" y="356" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
