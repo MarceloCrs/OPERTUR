@@ -55,5 +55,29 @@ class cn_personas extends opertur_cn
 	{
 		$this->dep('dr_personas')->tabla('dt_personas')->eliminar_todo();
 	}
+	//-----------------------------------------------------------------------------------
+	//---- dt_telefono ----------------------------------------------------------
+	//-----------------------------------------------------------------------------------
+	function procesar_filas_telefono($datos)
+	{
+		$this->dep('dr_personas')->tabla('dt_telefono')->procesar_filas($datos);
+	}
+	function get_telefono()
+	{
+		$datos = $this->dep('dr_personas')->tabla('dt_telefono')->get_filas();
+		return $datos;
+	}
+	//-----------------------------------------------------------------------------------
+	//---- dt_correo ----------------------------------------------------------
+	//-----------------------------------------------------------------------------------
+	function procesar_filas_correo($datos)
+	{
+		$this->dep('dr_personas')->tabla('dt_correo')->procesar_filas($datos);
+	}
+	function get_correo()
+	{
+		$datos = $this->dep('dr_personas')->tabla('dt_correo')->get_filas();
+		return $datos;
+	}
 }
 ?>

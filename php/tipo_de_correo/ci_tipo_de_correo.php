@@ -1,26 +1,27 @@
 <?php
-class ci_tipos_de_telefonos extends toba_ci
+class ci_tipo_de_correo extends toba_ci
 {
 	//---- Cuadro -----------------------------------------------------------------------
 
 	function conf__cuadro(toba_ei_cuadro $cuadro)
 	{
 		$cuadro->desactivar_modo_clave_segura();
-		$cuadro->set_datos($this->dep('datos')->tabla('tipo_telefono')->get_listado());
+		$cuadro->set_datos($this->dep('datos')->tabla('tipo_correo')->get_listado());
 	}
 
 	function evt__cuadro__seleccion($datos)
 	{
 		$this->dep('datos')->cargar($datos);
 		$this->set_pantalla('pant_edicion');
-	}
+		
+		}
 
 	//---- Formulario -------------------------------------------------------------------
 
 	function conf__formulario(toba_ei_formulario $form)
 	{
 		if ($this->dep('datos')->esta_cargada()) {
-			$form->set_datos($this->dep('datos')->tabla('tipo_telefono')->get());
+			$form->set_datos($this->dep('datos')->tabla('tipo_correo')->get());
 		} else {
 			$this->pantalla()->eliminar_evento('eliminar');
 		}
@@ -28,7 +29,7 @@ class ci_tipos_de_telefonos extends toba_ci
 
 	function evt__formulario__modificacion($datos)
 	{
-		$this->dep('datos')->tabla('tipo_telefono')->set($datos);
+		$this->dep('datos')->tabla('tipo_correo')->set($datos);
 	}
 
 	function resetear()
