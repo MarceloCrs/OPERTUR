@@ -98,6 +98,18 @@ INSERT INTO apex_objeto_dependencias (proyecto, dep_id, objeto_consumidor, objet
 );
 INSERT INTO apex_objeto_dependencias (proyecto, dep_id, objeto_consumidor, objeto_proveedor, identificador, parametros_a, parametros_b, parametros_c, inicializar, orden) VALUES (
 	'opertur', --proyecto
+	'4000112', --dep_id
+	'4000103', --objeto_consumidor
+	'4000139', --objeto_proveedor
+	'form_ml_domicilio', --identificador
+	NULL, --parametros_a
+	NULL, --parametros_b
+	NULL, --parametros_c
+	NULL, --inicializar
+	NULL  --orden
+);
+INSERT INTO apex_objeto_dependencias (proyecto, dep_id, objeto_consumidor, objeto_proveedor, identificador, parametros_a, parametros_b, parametros_c, inicializar, orden) VALUES (
+	'opertur', --proyecto
 	'4000087', --dep_id
 	'4000103', --objeto_consumidor
 	'4000111', --objeto_proveedor
@@ -178,4 +190,11 @@ INSERT INTO apex_objetos_pantalla (proyecto, pantalla, objeto_ci, orden, dep_id)
 	'4000103', --objeto_ci
 	'1', --orden
 	'4000090'  --dep_id
+);
+INSERT INTO apex_objetos_pantalla (proyecto, pantalla, objeto_ci, orden, dep_id) VALUES (
+	'opertur', --proyecto
+	'4000040', --pantalla
+	'4000103', --objeto_ci
+	'2', --orden
+	'4000112'  --dep_id
 );

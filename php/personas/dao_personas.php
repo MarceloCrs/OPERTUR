@@ -68,5 +68,53 @@ class dao_personas
       return 'Falló, intente nuevamente';
     }
   }
+
+  //-----------------------------------------------------------------------------------
+	//----dt_domicilio ----------------------------------------------------------
+	//-----------------------------------------------------------------------------------
+
+  static function get_Pais($id_pais)
+  {
+    $id_pais = quote($id_pais);
+
+    $sql = "SELECT nombre_pais
+              FROM pais
+              WHERE id_pais = $id_pais";
+
+    $resultado = consultar_fuente($sql);
+
+    if (count($resultado) > 0 ){
+      return $resultado[0]['nombre_pais'];
+    } else {
+      return 'Falló, intente nuevamente';
+    }
+  }
+
+  static function get_Provincia($id_pais)
+  {
+    $id_pais = quote($id_pais);
+
+    $sql = "SELECT id_provincia,
+                   nombre_provincia
+              FROM provincias
+              WHERE provincias.id_pais = $id_pais";
+
+    $opciones = consultar_fuente($sql);
+    return $opciones;
+  }
+
+  static function get_localidad($id_provincia)
+  {
+    $id_provincia = quote($id_provincia);
+
+    $sql = "SELECT id_localidad,
+                   nombre_locali
+              FROM localidades
+              WHERE localidades.id_provincia = $id_provincia";
+
+    $opciones = consultar_fuente($sql);
+    return $opciones;
+  }
+
 }
 ?>

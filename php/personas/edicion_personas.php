@@ -79,6 +79,28 @@ class edicion_personas extends opertur_ci
 
 	}
 
+	//-----------------------------------------------------------------------------------
+	//---- form_ml_domicilio -------------------------------------------------------------------
+	//---------------------------------------------------------
+	//--------------------------
+	function evt__form_ml_domicilio__modificacion($datos)
+	{
+		$this->s__datos['form_ml_domicilio'] = $datos;
+	}
+
+	function conf__form_ml_domicilio(opertur_ei_formulario_ml $form_ml)
+	{
+		if (isset($this->s__datos['form_ml_domicilio'])) {
+			$form_ml->set_datos($this->s__datos['form_ml_domicilio']);
+		} else {
+			if ($this->cn()->hay_cursor()) {
+				$datos = $this->cn()->get_domicilio();
+				$this->s__datos['form_ml_domicilio'] = $datos;
+				$form_ml->set_datos($datos);
+			}
+		}
+
+	}
 
 	function setear_todos_los_formularios()
     {
@@ -91,7 +113,9 @@ class edicion_personas extends opertur_ci
 			if (isset($this->s__datos['form_ml_correo'])) {
 				$this->cn()->procesar_filas_correo($this->s__datos['form_ml_correo']);
 			}
-
+			if (isset($this->s__datos['form_ml_domicilio'])) {
+				$this->cn()->procesar_filas_domicilio($this->s__datos['form_ml_domicilio']);
+			}
     }
 }
 

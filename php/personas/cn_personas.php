@@ -79,5 +79,17 @@ class cn_personas extends opertur_cn
 		$datos = $this->dep('dr_personas')->tabla('dt_correo')->get_filas();
 		return $datos;
 	}
+	//-----------------------------------------------------------------------------------
+	//---- dt_domicilio ----------------------------------------------------------
+	//-----------------------------------------------------------------------------------
+	function procesar_filas_domicilio($datos)
+	{
+		$this->dep('dr_personas')->tabla('dt_domicilio')->procesar_filas($datos);
+	}
+	function get_domicilio()
+	{
+		$datos = $this->dep('dr_personas')->tabla('dt_domicilio')->get_filas();
+		return $datos;
+	}
 }
 ?>
