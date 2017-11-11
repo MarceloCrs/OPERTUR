@@ -78,7 +78,7 @@ class dao_personas
     $id_pais = quote($id_pais);
 
     $sql = "SELECT nombre_pais
-              FROM pais
+              FROM paises
               WHERE id_pais = $id_pais";
 
     $resultado = consultar_fuente($sql);
@@ -108,7 +108,7 @@ class dao_personas
     $id_provincia = quote($id_provincia);
 
     $sql = "SELECT id_localidad,
-                   nombre_locali
+                   nombre_localidad
               FROM localidades
               WHERE localidades.id_provincia = $id_provincia";
 

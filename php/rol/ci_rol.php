@@ -1,12 +1,11 @@
 <?php
-class ci_localidad extends toba_ci
+class ci_rol extends toba_ci
 {
 	//---- Cuadro -----------------------------------------------------------------------
 
 	function conf__cuadro(toba_ei_cuadro $cuadro)
 	{
-		$cuadro->desactivar_modo_clave_segura();
-		$cuadro->set_datos($this->dep('datos')->tabla('localidades')->get_listado());
+		$cuadro->set_datos($this->dep('datos')->tabla('rol')->get_listado());
 	}
 
 	function evt__cuadro__seleccion($datos)
@@ -20,7 +19,7 @@ class ci_localidad extends toba_ci
 	function conf__formulario(toba_ei_formulario $form)
 	{
 		if ($this->dep('datos')->esta_cargada()) {
-			$form->set_datos($this->dep('datos')->tabla('localidades')->get());
+			$form->set_datos($this->dep('datos')->tabla('rol')->get());
 		} else {
 			$this->pantalla()->eliminar_evento('eliminar');
 		}
@@ -28,7 +27,7 @@ class ci_localidad extends toba_ci
 
 	function evt__formulario__modificacion($datos)
 	{
-		$this->dep('datos')->tabla('localidades')->set($datos);
+		$this->dep('datos')->tabla('rol')->set($datos);
 	}
 
 	function resetear()

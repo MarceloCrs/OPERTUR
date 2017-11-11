@@ -53,7 +53,7 @@ class cn_personas extends opertur_cn
 
 	function eliminar()
 	{
-		$this->dep('dr_personas')->tabla('dt_personas')->eliminar_todo();
+		$this->dep('dr_personas')->eliminar_todo();
 	}
 	//-----------------------------------------------------------------------------------
 	//---- dt_telefono ----------------------------------------------------------

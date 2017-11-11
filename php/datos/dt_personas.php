@@ -7,6 +7,6 @@ class dt_personas extends toba_datos_tabla
 		return toba::db('opertur')->consultar($sql);
 	}
 
-}
 
+}
 ?>
